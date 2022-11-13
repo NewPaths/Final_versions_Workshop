@@ -25,12 +25,12 @@ options(htmltools.dir.version = FALSE)
 ### Introduction to package management
 - Problems of project reproducibility
 - `renv` to the rescue
-- Library Paths and Dependencies
+- Library paths and dependencies
 
 ### Getting to know `renv`
 - `renv` functionalities
 - Advantages and limitations
-- Sources
+- References
 - Tutorial setup
 
 
@@ -378,7 +378,7 @@ Limitations:
 * Problems with updating packages that do not stem from the typical sources such as GitHub or CRAN, although it can install packages from other sources. 
 * It does does not solve all issues with reproducibility of a project: R version differences, operator differences and other issues can still cause errors. Fortunately, other packages have been created for this as well. 
 ---
-# Sources
+# References
 1. [Ushey K (2022). _renv: Project Environments_. R package version 0.16.0](https://CRAN.R-project.org/package=renv)
 2. [Xie Y (2022). _xaringan: Presentation Ninja_. R package version 0.27](https://CRAN.R-project.org/package=xaringan)
 3. [Xie Y (2022). _xaringan: Presentations](https://slides.yihui.org/xaringan/#39)
