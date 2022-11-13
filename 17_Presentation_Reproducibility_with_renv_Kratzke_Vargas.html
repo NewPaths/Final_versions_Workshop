@@ -41,12 +41,12 @@ class: center, middle, inverse, title-slide
 ### Introduction to package management
 - Problems of project reproducibility
 - `renv` to the rescue
-- Library Paths and Dependencies
+- Library paths and dependencies
 
 ### Getting to know `renv`
 - `renv` functionalities
 - Advantages and limitations
-- Sources
+- References
 - Tutorial setup
 
 
@@ -105,8 +105,9 @@ Without using `renv` we usually see a **user specific** library path and a **sys
 Here we see that we have the two paths (user and system). Usually packages that are not in the base R setup, will be installed (and called from) the user library. But this also shows us: every package has the same directory path and they cannot be different across projects.
 ---
 
-background-image: url(https://raw.githubusercontent.com/kevinushey/2020-rstudio-conf/a69566f48b345acc6a0ce9b0b158122001c4c155/img/shared-library.svg)
-background-size: contain
+&lt;img src="https://raw.githubusercontent.com/kevinushey/2020-rstudio-conf/a69566f48b345acc6a0ce9b0b158122001c4c155/img/shared-library.svg"
+     width="600px" height="600px"
+     style="position:absolute; left: 150px; top:110px;"&gt;
 
 # One library to rule them all
 
@@ -189,7 +190,7 @@ When setting up a new project, we can use `renv::init()`.
 
 Init() **combines** several functions from the `renv ` package. 
 * It will check which package dependencies within the `R` file used in the current project exist. The function `dependencies()` has the same effect.
-* All discovered packages are then stored in the `renv` global package cache (_we will get to that later_)
+* All discovered packages are then stored in the `renv` global package cache
 * Missing (but required) `R` packages are installed in the project-local library, i.e. the library path has now changed for this project.
 
 
@@ -197,8 +198,8 @@ Init() **combines** several functions from the `renv ` package.
 
 
 .libPaths()
-## [1] "C:/Users/cmkra/OneDrive/Dokumente/GitHub_CK_Repos/IDS-Workshop_Working_Material/renv/library/R-4.2/x86_64-w64-mingw32"
-## [2] "C:/Users/cmkra/AppData/Local/Temp/RtmpgzkZnD/renv-system-library"
+## [1] "C:/Users/cmkra/AppData/Local/R/win-library/4.2"
+## [2] "C:/Program Files/R/R-4.2.1/library"
 ```
 
 
@@ -226,7 +227,7 @@ Finally, your working directory should now be set to your project.
 
 ```r
 renv::project()
-## [1] "C:/Users/cmkra/OneDrive/Dokumente/GitHub_CK_Repos/IDS-Workshop_Working_Material"
+## NULL
 ```
 
 ???
@@ -339,14 +340,14 @@ But `renv` also has limitations:
 
 
 
-.center[Fortunately, other packages have been created for these other issues: Check out [Docker] (https://github.com/rocker-org/rocker) if you are interested to find out more.
+.center[Fortunately, other packages have been created for these other issues: Check out [Docker] (https://github.com/rocker-org/rocker) if you are interested to find out more.]
 
 ???
 Limitations: 
 * Problems with updating packages that do not stem from the typical sources such as GitHub or CRAN, although it can install packages from other sources. 
 * It does does not solve all issues with reproducibility of a project: R version differences, operator differences and other issues can still cause errors. Fortunately, other packages have been created for this as well. 
 ---
-# Sources
+# References
 1. [Ushey K (2022). _renv: Project Environments_. R package version 0.16.0](https://CRAN.R-project.org/package=renv)
 2. [Xie Y (2022). _xaringan: Presentation Ninja_. R package version 0.27](https://CRAN.R-project.org/package=xaringan)
 3. [Xie Y (2022). _xaringan: Presentations](https://slides.yihui.org/xaringan/#39)

@@ -107,8 +107,9 @@ find.package("base")
 Here we see that we have the two paths (user and system). Usually packages that are not in the base R setup, will be installed (and called from) the user library. But this also shows us: every package has the same directory path and they cannot be different across projects.
 ---
 
-background-image: url(https://raw.githubusercontent.com/kevinushey/2020-rstudio-conf/a69566f48b345acc6a0ce9b0b158122001c4c155/img/shared-library.svg)
-background-size: contain
+<img src="https://raw.githubusercontent.com/kevinushey/2020-rstudio-conf/a69566f48b345acc6a0ce9b0b158122001c4c155/img/shared-library.svg"
+     width="600px" height="600px"
+     style="position:absolute; left: 150px; top:110px;">
 
 # One library to rule them all
 
@@ -215,7 +216,7 @@ knitr::include_graphics("/pics/calling_renv.png")
 
 Init() **combines** several functions from the `renv ` package. 
 * It will check which package dependencies within the `R` file used in the current project exist. The function `dependencies()` has the same effect.
-* All discovered packages are then stored in the `renv` global package cache (_we will get to that later_)
+* All discovered packages are then stored in the `renv` global package cache
 * Missing (but required) `R` packages are installed in the project-local library, i.e. the library path has now changed for this project.
 
 ```{r, collapse=TRUE}
@@ -371,7 +372,7 @@ But `renv` also has limitations:
 
 
 
-.center[Fortunately, other packages have been created for these other issues: Check out [Docker] (https://github.com/rocker-org/rocker) if you are interested to find out more.
+.center[Fortunately, other packages have been created for these other issues: Check out [Docker] (https://github.com/rocker-org/rocker) if you are interested to find out more.]
 
 ???
 Limitations: 
