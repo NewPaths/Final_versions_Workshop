@@ -20,9 +20,6 @@ options(htmltools.dir.version = FALSE)
 ```
 
 
-
----
-
 # Agenda
 
 ### Introduction to package management
