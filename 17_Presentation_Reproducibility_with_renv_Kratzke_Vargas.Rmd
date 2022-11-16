@@ -4,8 +4,9 @@ subtitle: "Intro to Data Science, Fall 2022 Workshops"
 author: "Corinna Kratzke and Luis Roberto Vargas"
 institute: "Hertie School"
 date: "2022/11/12 (updated: `r Sys.Date()`)"
-output:
-  xaringan::moon_reader:
+output: 
+   xaringan::moon_reader:
+    keep_md: true
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -132,7 +133,7 @@ it gives you all the tools (packages) you need to get useful functions, well-str
 
 
 
-```{undefined echo=FALSE}
+```{undefined echo=FALSE, out.width= "300px", out.height = "300px"}
 
 knitr::include_graphics("/pics/toolbox.png")
 
@@ -140,8 +141,10 @@ knitr::include_graphics("/pics/toolbox.png")
 
 ```
 .center[![plot](pics/toolbox.png)]
-]
 
+.footnote[ Image credit: [Google Images ](https:://werkzeugkoffer-shop.de)]
+
+]
 ---
 
 # Dependencies
