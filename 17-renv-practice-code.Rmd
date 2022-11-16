@@ -3,6 +3,7 @@ title: "Package version control"
 subtitle: "Practice code"
 output: 
   html_document:
+    keep_md: TRUE
     toc: TRUE
     df_print: paged
     number_sections: FALSE
